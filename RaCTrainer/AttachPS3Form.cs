@@ -236,7 +236,7 @@ namespace racman
                 gameName = "RAC 4";
                 rac4.ShowDialog();
             }
-            else if (game == "BCES00850" || game == "BCJS30058")
+            else if (game == "BCUS98245" || game == "BCES00850" || game == "BCES01086" || game == "BCJS30058" || game == "BCAS20113" || game == "BCKS10150")
             {
                 Hide();
                 func.api.Notify("sackMAN connected!");
@@ -244,7 +244,7 @@ namespace racman
                 gameName = "LBP2";
                 lbp2.ShowDialog();
             }
-            else if (game == "BCUS98208" || game == "BCJS30018")
+            else if (game == "BCES00141" || game == "BCUS98148" || game == "BCAS20058" || game == "BCJS30018" || game == "BCUS98208" || game == "BCAS20078")
             {
                 Hide();
                 func.api.Notify("sackMAN connected!");

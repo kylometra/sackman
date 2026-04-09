@@ -12,6 +12,7 @@ namespace racman
 {
     public partial class LBP2Form : Form
     {
+        static ModLoaderForm modLoaderForm;
         public lbp2 game;
         private AutosplitterHelper autosplitterHelper;
         public LBP2Form(lbp2 game)
@@ -45,10 +46,31 @@ namespace racman
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void switchGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClosed -= LBP2Form_FormClosed;
+            Program.AttachPS3Form.Show();
+            Close();
+        }
+
+        private void memoryViewerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MemoryForm memoryForm = new MemoryForm();
             memoryForm.Show();
+        }
+
+        private void patchLoaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((Application.OpenForms["ModLoaderForm"] as ModLoaderForm) != null)
+            {
+                modLoaderForm.Activate();
+            }
+            else
+            {
+                modLoaderForm = new ModLoaderForm();
+                modLoaderForm.Show();
+            }
         }
     }
 
