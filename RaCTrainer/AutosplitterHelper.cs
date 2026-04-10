@@ -5,7 +5,7 @@ using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Threading;
 
-namespace racman
+namespace sackMAN
 {
     public interface IAutosplitterAvailable
     {
@@ -37,7 +37,7 @@ namespace racman
 
         public AutosplitterHelper()
         {
-            mmfFile = MemoryMappedFile.CreateOrOpen("racman-autosplitter", mmfSize);
+            mmfFile = MemoryMappedFile.CreateOrOpen("sackman-autosplitter", mmfSize);
             mmfStream = mmfFile.CreateViewStream();
             writer = new BinaryWriter(mmfStream);
         }
@@ -62,7 +62,7 @@ namespace racman
             writer?.Close();
             writer = null;
 
-            mmfFile = MemoryMappedFile.CreateOrOpen("racman-autosplitter", mmfSize);
+            mmfFile = MemoryMappedFile.CreateOrOpen("sackman-autosplitter", mmfSize);
             mmfStream = mmfFile.CreateViewStream();
             writer = new BinaryWriter(mmfStream);
 

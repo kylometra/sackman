@@ -1,4 +1,4 @@
-state("racman") {}
+state("sackMAN") {}
 
 startup
 {    
@@ -7,7 +7,7 @@ startup
 
 init
 {
-    System.IO.MemoryMappedFiles.MemoryMappedFile mmf = System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting("racman-autosplitter");
+    System.IO.MemoryMappedFiles.MemoryMappedFile mmf = System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting("sackman-autosplitter");
     System.IO.MemoryMappedFiles.MemoryMappedViewStream stream = mmf.CreateViewStream();
     vars.reader = new System.IO.BinaryReader(stream);
     
