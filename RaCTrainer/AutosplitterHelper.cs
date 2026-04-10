@@ -37,7 +37,7 @@ namespace sackMAN
 
         public AutosplitterHelper()
         {
-            mmfFile = MemoryMappedFile.CreateOrOpen("racman-autosplitter", mmfSize);
+            mmfFile = MemoryMappedFile.CreateOrOpen("sackman-autosplitter", mmfSize);
             mmfStream = mmfFile.CreateViewStream();
             writer = new BinaryWriter(mmfStream);
         }
@@ -62,7 +62,7 @@ namespace sackMAN
             writer?.Close();
             writer = null;
 
-            mmfFile = MemoryMappedFile.CreateOrOpen("racman-autosplitter", mmfSize);
+            mmfFile = MemoryMappedFile.CreateOrOpen("sackman-autosplitter", mmfSize);
             mmfStream = mmfFile.CreateViewStream();
             writer = new BinaryWriter(mmfStream);
 
